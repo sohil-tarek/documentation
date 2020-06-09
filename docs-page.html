@@ -62,13 +62,24 @@
             </div>
 		    <nav id="docs-nav" class="docs-nav navbar">
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
 				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Introduction</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Controller's code</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Section Item 1.2</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Section Item 1.3</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Section Item 1.4</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Section Item 1.5</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Section Item 1.6</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Banner Controller</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">AboutParagraphs Controller</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Ask Doctor Controller</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">BackgroundController</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Branches Controller</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Career  Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-7">Categories Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-8">Clients Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-9">Contact Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-10">Event Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-11">Event video Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-12">Magazine Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-13">jobs Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-14">News Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-15">Product Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-16">service Controller</a></li>
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder mr-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">Section Item 2.1</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Section Item 2.2</a></li>
@@ -187,7 +198,923 @@
 
 </code></pre>
 						</div><!--//docs-code-block-->
-						<h5>Ordered List Examples:</h5>
+						<h4 id="item-1-2" >2) AboutParagraphs Controller :</h4>
+						<br>
+						<h5>a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateAboutParagraphsRequest $request)
+	{
+
+	    $request =    $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>AboutParagraphs::max('sort')+1]));
+
+		$aboutparagraphs= AboutParagraphs::create($request->all());
+
+
+		return $aboutparagraphs;
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h5>B) Update function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateAboutParagraphsRequest $request)
+	{
+		$aboutparagraphs = AboutParagraphs::findOrFail($id);
+
+
+
+        $aboutparagraphs->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.aboutparagraphs.index');
+
+	}
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function destroy($id)
+	{
+		AboutParagraphs::destroy($id);
+
+		return 1;
+	}
+
+</code></pre>
+						<h4 id="item-1-3">3) Ask Doctor Controller :</h4>
+						<br>
+						<h5>a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateaskRequest $request)
+	{
+
+	    $request=new   Request(array_merge($request->all(),['sort'=>Ask::max('sort')+1]));
+		$ask    =Ask::create($request->all());
+		return $ask;
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h5>B) Update function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, CreateaskRequest $request)
+	{
+        $ask = Ask::findOrFail($id);
+	     $data = request()->validate([
+	         'name'     => 'required',
+	         'email'    => 'required |email',
+             'answer'   => 'required',
+             'question' => 'required'
+         ]);
+
+	       $ask->update($data);
+
+
+
+        $to_email = $request->email;
+        $data = array("name"=> "19011 Website","body"=>"testing mail");
+
+        Mail::send('mail',$data,function ($message)use ($to_email){
+           $message->to($to_email)->subject("testing 19011");
+        });
+
+        \Session::flash('success', 'mail send  successfully');
+        return redirect()->route(config('quickadmin.route').'.ask.index');
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function destroy($id)
+	{
+		Ask::destroy($id);
+
+		return 1;
+	}
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+						<h4 id="item-1-4">4) BackgroundController :</h4>
+						<br>
+						<h5 >a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateBackgroundRequest $request)
+	{
+	    $request = $this->saveFiles($request);
+	    $request=new Request(array_merge($request->all(),['sort'=>Background::max('sort')+1]));
+
+		$background= Background::create($request->all());
+
+
+		return $background;
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h5>B) Update function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateBackgroundRequest $request)
+	{
+		$background = Background::findOrFail($id);
+
+        $request = $this->saveFiles($request);
+
+        $background->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.background.index');
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function destroy($id)
+	{
+		Background::destroy($id);
+
+		return 1;
+	}
+
+</code></pre>
+						<h4 id="item-1-5" >
+							5) Branches Controller </h4>
+						<br>
+						<h5>a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+ public function store(CreateBrancheRequest $request)
+    {
+        $request=new Request(array_merge($request->all(),['sort'=>Branche::max('sort')+1]));
+        $branches= Branche::create($request->all());
+        return $branches;
+
+
+    }
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h5 >B) Update function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function update(UploadBrancheRequest $request, $id)
+    {
+        $branches = Branche::findOrFail($id);
+        $branches->update($request->all());
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.branches.index');
+
+
+    }
+
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Branche::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+						</div><!--//docs-code-block-->
+							<h4 id="item-1-6" >
+							6) Career Controller </h4>
+						<br>
+						<h5>a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+  public function store(createCareerRequest $request)
+    {
+         $career = new Career;
+          $request=new  Request(array_merge($request->all(),['sort'=>Career::max('sort')+1]));
+          $career=      Career::create($request->all());
+            return Redirect::back()->with('success','Thank you, We will contact with you soon');
+    }
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+   public function destroy($id)
+    {
+        Career::destroy($id);
+
+        return 1;
+    }
+}
+
+</code></pre>
+						</div><!--//docs-code-block-->
+							<h4 id="item-1-7" >
+								7)  Categories Controller </h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateCategoriesRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Categories::max('sort')+1]));
+
+		$categories= Categories::create($request->all());
+
+
+		return $categories;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateCategoriesRequest $request)
+	{
+		$categories = Categories::findOrFail($id);
+
+
+
+        $categories->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.categories.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Categories::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h4 id="item-1-8" >
+								8)Clients Controller </h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateClientsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Clients::max('sort')+1]));
+
+		$Clients= Categories::create($request->all());
+
+
+		return $Clients;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateClientsRequest $request)
+	{
+		$Clients = Clients::findOrFail($id);
+
+
+
+        $Clients->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Clients.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Clients::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+<!--//docs-code-block-->
+							<h4 id="item-1-9" >
+								8)Contact Controller </h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateContactsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Contacts::max('sort')+1]));
+
+		$Contacts= Contacts::create($request->all());
+
+
+		return $Contacts;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateContactsRequest $request)
+	{
+		$Contacts = Contacts::findOrFail($id);
+
+
+
+        $Contacts->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Contacts.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Contacts::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block--><h4 id="item-1-10" >
+								9)Doctors Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateDoctorsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Doctors::max('sort')+1]));
+
+		$Doctors= Doctors::create($request->all());
+
+
+		return $Doctors;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateDoctorsRequest $request)
+	{
+		$Doctors = Contacts::findOrFail($id);
+
+
+
+        $Doctors->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Doctors.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Doctors::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+<!--//docs-code-block-->
+							<h4 id="item-1-11" >
+								10)EventController</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateEventsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Event::max('sort')+1]));
+
+		$Events= Event::create($request->all());
+
+
+		return $Events;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateEventsRequest $request)
+	{
+		$Events = Event::findOrFail($id);
+
+
+
+        $Events->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Event.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Event::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+							<h4 id="item-1-12" >
+								11)Event video Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateeventvideoRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Eventvideo::max('sort')+1]));
+
+		$Events= Eventvideo::create($request->all());
+
+
+		return $Eventvideo;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateEventvideoRequest $request)
+	{
+		$Eventvideo = Event::findOrFail($id);
+
+
+
+        $Eventvideo->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Eventvideo.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Eventvideo::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h4 id="item-1-13" >
+								12)Magazine Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateMagazineRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Magazine ::max('sort')+1]));
+
+		$Magazines  = Magazine ::create($request->all());
+
+
+		return $Magazine ;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateMagazineRequest $request)
+	{
+		$Magazine  = Magazine ::findOrFail($id);
+
+
+
+        $Magazine->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Magazine.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Magazine ::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h4 id="item-1-14" >
+								13)jobs Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreatejobsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>jobs::max('sort')+1]));
+
+		$jobs= Doctors::create($request->all());
+
+
+		return $jobs;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdatejobsRequest $request)
+	{
+		$jobs = Contacts::findOrFail($id);
+
+
+
+        $jobs->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.jobs.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Doctors::jobs($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<!--//docs-code-block-->
+							<h4 id="item-1-15" >
+								14)News Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateNewsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>News::max('sort')+1]));
+
+		$News= News::create($request->all());
+
+
+		return $News;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateEventsRequest $request)
+	{
+		$News = $News::findOrFail($id);
+
+
+
+        $News->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.News.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        $News::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+							<h4 id="item-1-16" >
+								15)Product Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateProductsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Products::max('sort')+1]));
+
+		$Products= Products::create($request->all());
+
+
+		return $Products;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateProductsRequest $request)
+	{
+		$Products = Products::findOrFail($id);
+
+
+
+        $Products->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Products.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Products::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h4 id="item-1-17" >
+									16)service Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(serviceController $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>service::max('sort')+1]));
+
+		$services = service::create($request->all());
+
+
+		return $services;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateEventvideoRequest $request)
+	{
+		$services = Services::findOrFail($id);
+        $services ->update($request->all());
+        \Session::flash('success', 'edited successfully');
+        return redirect()->route(config('quickadmin.route').'.services.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        services::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div>
+							<h5>Ordered List Examples:</h5>
 						<ol>
 							<li>Download lorem ipsum dolor sit amet.</li>
 							<li>Click ipsum faucibus venenatis.</li>
@@ -273,7 +1200,7 @@
                        
 					</section><!--//section-->
 					
-					<section class="docs-section" id="item-1-2">
+					<section class="docs-section">
 						<h2 class="section-heading">Section Item 1.2</h2>
 						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
 						<h5>Image Lightbox Example:</h5>
