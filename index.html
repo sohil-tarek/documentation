@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>CoderDocs - Bootstrap 4 Documentation Template For Software Projects</title>
+    <title>19011 - Documentation</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bootstrap Documentation Template For Software Developers">
+    
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon.ico"> 
     
@@ -16,240 +17,2274 @@
     
     <!-- FontAwesome JS-->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
 
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
 </head> 
 
-<body>    
+<body class="docs-page">    
     <header class="header fixed-top">	    
         <div class="branding docs-branding">
             <div class="container-fluid position-relative py-2">
                 <div class="docs-logo-wrapper">
-	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/coderdocs-logo.svg" alt="logo"><span class="logo-text">Coder<span class="text-alt">Docs</span></span></a></div>    
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="#"><span class="logo-text">Technical Documentation<span class="text-alt"></span></span></a></div>
                 </div><!--//docs-logo-wrapper-->
-	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
-	
-					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-		                <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-		            </ul><!--//social-list-->
-		            <a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderdocs-free-bootstrap-4-documentation-template-for-software-projects/" class="btn btn-primary d-none d-lg-flex">Download</a>
-	            </div><!--//docs-top-utilities-->
+
             </div><!--//container-->
         </div><!--//branding-->
     </header><!--//header-->
     
-    
-    <div class="page-header theme-bg-dark py-5 text-center position-relative">
-	    <div class="theme-bg-shapes-right"></div>
-	    <div class="theme-bg-shapes-left"></div>
-	    <div class="container">
-		    <h1 class="page-heading single-col-max mx-auto">Documentation</h1>
-		    <div class="page-intro single-col-max mx-auto">Everything you need to get your software documentation online.</div>
-		    <div class="main-search-box pt-3 d-block mx-auto">
-                 <form class="search-form w-100">
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
 		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
 		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
 		        </form>
-             </div>
-	    </div>
-    </div><!--//page-header-->
-    <div class="page-content">
-	    <div class="container">
-		    <div class="docs-overview py-5">
-			    <div class="row justify-content-center">
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder mr-2">
-								        <i class="fas fa-map-signs"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">Introduction</span>
-							    </h5>
-							    <div class="card-text">
-								    Section overview goes here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-							    </div>
-							    <a class="card-link-mask" href="docs-page.html#section-1"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder mr-2">
-								        <i class="fas fa-arrow-down"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">Installation</span>
-							    </h5>
-							    <div class="card-text">
-								    Section overview goes here. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-							    </div>
-							    <a class="card-link-mask" href="docs-page.html#section-2"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder mr-2">
-								        <i class="fas fa-box fa-fw"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">APIs</span>
-							    </h5>
-							    <div class="card-text">
-								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
-								</div>
-							    <a class="card-link-mask" href="docs-page.html#section-3"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder mr-2">
-								        <i class="fas fa-cogs fa-fw"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">Integrations</span>
-							    </h5>
-							    <div class="card-text">
-								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
-								</div>
-							    <a class="card-link-mask" href="docs-page.html#section-4"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder mr-2">
-								        <i class="fas fa-tools"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">Utilities</span>
-							    </h5>
-							    <div class="card-text">
-								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
-								</div>
-							    <a class="card-link-mask" href="docs-page.html#section-5"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder mr-2">
-								        <i class="fas fa-laptop-code"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">Web</span>
-							    </h5>
-							    <div class="card-text">
-								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
-								</div>
-							    <a class="card-link-mask" href="docs-page.html#section-6"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder mr-2">
-								        <i class="fas fa-tablet-alt"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">Mobile</span>
-							    </h5>
-							    <div class="card-text">
-								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
-								</div>
-							    <a class="card-link-mask" href="docs-page.html#section-7"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder mr-2">
-								        <i class="fas fa-book-reader"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">Resources</span>
-							    </h5>
-							    <div class="card-text">
-								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
-								</div>
-							    <a class="card-link-mask" href="docs-page.html#section-8"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-				    <div class="col-12 col-lg-4 py-3">
-					    <div class="card shadow-sm">
-						    <div class="card-body">
-							    <h5 class="card-title mb-3">
-								    <span class="theme-icon-holder card-icon-holder mr-2">
-								        <i class="fas fa-lightbulb"></i>
-							        </span><!--//card-icon-holder-->
-							        <span class="card-title-text">FAQs</span>
-							    </h5>
-							    <div class="card-text">
-								    Section overview goes here. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.						    
-								</div>
-							    <a class="card-link-mask" href="docs-page.html#section-9"></a>
-						    </div><!--//card-body-->
-					    </div><!--//card-->
-				    </div><!--//col-->
-			    </div><!--//row-->
-		    </div><!--//container-->
-		</div><!--//container-->
-    </div><!--//page-content-->
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span> Config & Controllers</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Banner Controller</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">AboutParagraphs Controller</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Ask Doctor Controller</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">BackgroundController</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Branches Controller</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Career  Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-7">Categories Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-8">Clients Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-9">Contact Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-10">Doctors Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-11">Event Controller</a></li>
 
-    <section class="cta-section text-center py-5 theme-bg-dark position-relative">
-	    <div class="theme-bg-shapes-right"></div>
-	    <div class="theme-bg-shapes-left"></div>
-	    <div class="container">
-		    <h3 class="mb-2 text-white mb-3">Launch Your Software Project Like A Pro</h3>
-		    <div class="section-intro text-white mb-3 single-col-max mx-auto">Want to launch your software project and start getting traction from your target users? Check out our premium <a class="text-white" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/">Bootstrap 4 startup template CoderPro</a>! It has everything you need to promote your product.</div>
-		    <div class="pt-3 text-center">
-			    <a class="btn btn-light" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/coderpro-bootstrap-4-startup-template-for-software-projects/">Get CoderPro<i class="fas fa-arrow-alt-circle-right ml-2"></i></a>
-		    </div>
-	    </div>
-    </section><!--//cta-section-->
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-12">Event video Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-13">Magazine Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-14">jobs Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-15">News Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-16">Product Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-17">service Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-18">Testmonials Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-19">Statistics Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-20">Tip of the month Controller</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-21">Social Controller</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder mr-2"><i class="fas fa-arrow-down"></i></span> Model & Relations</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">AboutParagraphs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Ask Doctor</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Background</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-4">Banner</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-5">Branche</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-6">Career</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-7">Categories</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-8">Clients</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-9">Contact</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-11">Dic</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-12">Doctors</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-13">Event</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-14">Event Video</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-15">Job</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-16">Magazine</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-17">News</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-18">Notifcations</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-19">Product</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-20">Role</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-21">Service</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-22">Sitemap</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-23">social</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-24">statistics</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-25">tip of the month</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-26">User</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder mr-2"><i class="fas fa-box"></i></span> Route & URL</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Routes</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>Integrated Plugins</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Composer.json</a></li>
 
-               
+
+			    </ul>
+
+		    </nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+	    <div class="docs-content">
+		    <div class="container">
+
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+
+						<h2 class="section-heading">Database configuration </h2>
+
+						<p>You can configuration database  by adding it's name & username and password in :</p>
+						<p>From  .env file :</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+ DB_DATABASE= add database Name
+
+ DB_USERNAME= username for your phpaAmin
+
+ DB_PASSWORD= database password
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						
+						
+				    </header>
+				    <section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Controller's code </h2>
+						<p>here the function's of admin panel @ app\Http\Controllers\Admin </p>
+						<h4>1) Banner controller :</h4>
+						<br>
+						<h5>a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateBannerRequest $request)
+	{
+	    $request =    $this->saveFiles($request);
+	    if($request->title == null){
+	      $request['title'] = 'no title';
+        }
+	    $request=new  Request(array_merge($request->all(),['sort'=>Banner::max('sort')+1]));
+		$banner=      Banner::create($request->all());
+		return $banner;
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h5>B) Update function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateBannerRequest $request)
+	{
+		$banner = Banner::findOrFail($id);
+
+        $request = $this->saveFiles($request);
+
+        $banner->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.banner.index');
+	}
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function destroy($id)
+	{
+		Banner::destroy($id);
+
+		return 1;
+	}
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h4 id="item-1-2" >2) AboutParagraphs Controller :</h4>
+						<br>
+						<h5>a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateAboutParagraphsRequest $request)
+	{
+
+	    $request =    $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>AboutParagraphs::max('sort')+1]));
+
+		$aboutparagraphs= AboutParagraphs::create($request->all());
+
+
+		return $aboutparagraphs;
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h5>B) Update function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateAboutParagraphsRequest $request)
+	{
+		$aboutparagraphs = AboutParagraphs::findOrFail($id);
+
+
+
+        $aboutparagraphs->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.aboutparagraphs.index');
+
+	}
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function destroy($id)
+	{
+		AboutParagraphs::destroy($id);
+
+		return 1;
+	}
+
+</code></pre>
+						<h4 id="item-1-3">3) Ask Doctor Controller :</h4>
+						<br>
+						<h5>a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateaskRequest $request)
+	{
+
+	    $request=new   Request(array_merge($request->all(),['sort'=>Ask::max('sort')+1]));
+		$ask    =Ask::create($request->all());
+		return $ask;
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h5>B) Update function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, CreateaskRequest $request)
+	{
+        $ask = Ask::findOrFail($id);
+	     $data = request()->validate([
+	         'name'     => 'required',
+	         'email'    => 'required |email',
+             'answer'   => 'required',
+             'question' => 'required'
+         ]);
+
+	       $ask->update($data);
+
+
+
+        $to_email = $request->email;
+        $data = array("name"=> "19011 Website","body"=>"testing mail");
+
+        Mail::send('mail',$data,function ($message)use ($to_email){
+           $message->to($to_email)->subject("testing 19011");
+        });
+
+        \Session::flash('success', 'mail send  successfully');
+        return redirect()->route(config('quickadmin.route').'.ask.index');
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function destroy($id)
+	{
+		Ask::destroy($id);
+
+		return 1;
+	}
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+						<h4 id="item-1-4">4) BackgroundController :</h4>
+						<br>
+						<h5 >a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateBackgroundRequest $request)
+	{
+	    $request = $this->saveFiles($request);
+	    $request=new Request(array_merge($request->all(),['sort'=>Background::max('sort')+1]));
+
+		$background= Background::create($request->all());
+
+
+		return $background;
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h5>B) Update function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateBackgroundRequest $request)
+	{
+		$background = Background::findOrFail($id);
+
+        $request = $this->saveFiles($request);
+
+        $background->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.background.index');
+	}
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function destroy($id)
+	{
+		Background::destroy($id);
+
+		return 1;
+	}
+
+</code></pre>
+						<h4 id="item-1-5" >
+							5) Branches Controller </h4>
+						<br>
+						<h5>a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+ public function store(CreateBrancheRequest $request)
+    {
+        $request=new Request(array_merge($request->all(),['sort'=>Branche::max('sort')+1]));
+        $branches= Branche::create($request->all());
+        return $branches;
+
+
+    }
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+						<h5 >B) Update function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function update(UploadBrancheRequest $request, $id)
+    {
+        $branches = Branche::findOrFail($id);
+        $branches->update($request->all());
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.branches.index');
+
+
+    }
+
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Branche::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+						</div><!--//docs-code-block-->
+							<h4 id="item-1-6" >
+							6) Career Controller </h4>
+						<br>
+						<h5>a)Add function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+  public function store(createCareerRequest $request)
+    {
+         $career = new Career;
+          $request=new  Request(array_merge($request->all(),['sort'=>Career::max('sort')+1]));
+          $career=      Career::create($request->all());
+            return Redirect::back()->with('success','Thank you, We will contact with you soon');
+    }
+
+
+</code></pre>
+						</div><!--//docs-code-block-->
+
+
+
+
+						<h5>c) Delete function :</h5>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+   public function destroy($id)
+    {
+        Career::destroy($id);
+
+        return 1;
+    }
+}
+
+</code></pre>
+						</div><!--//docs-code-block-->
+							<h4 id="item-1-7" >
+								7)  Categories Controller </h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateCategoriesRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Categories::max('sort')+1]));
+
+		$categories= Categories::create($request->all());
+
+
+		return $categories;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateCategoriesRequest $request)
+	{
+		$categories = Categories::findOrFail($id);
+
+
+
+        $categories->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.categories.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Categories::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h4 id="item-1-8" >
+								8)Clients Controller </h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateClientsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Clients::max('sort')+1]));
+
+		$Clients= Categories::create($request->all());
+
+
+		return $Clients;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateClientsRequest $request)
+	{
+		$Clients = Clients::findOrFail($id);
+
+
+
+        $Clients->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Clients.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Clients::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+<!--//docs-code-block-->
+							<h4 id="item-1-9" >
+								9)Contact Controller </h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateContactsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Contacts::max('sort')+1]));
+
+		$Contacts= Contacts::create($request->all());
+
+
+		return $Contacts;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateContactsRequest $request)
+	{
+		$Contacts = Contacts::findOrFail($id);
+
+
+
+        $Contacts->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Contacts.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Contacts::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block--><h4 id="item-1-10" >
+								10)Doctors Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateDoctorsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Doctors::max('sort')+1]));
+
+		$Doctors= Doctors::create($request->all());
+
+
+		return $Doctors;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateDoctorsRequest $request)
+	{
+		$Doctors = Contacts::findOrFail($id);
+
+
+
+        $Doctors->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Doctors.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Doctors::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+<!--//docs-code-block-->
+							<h4 id="item-1-11" >
+								11)EventController</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateEventsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Event::max('sort')+1]));
+
+		$Events= Event::create($request->all());
+
+
+		return $Events;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateEventsRequest $request)
+	{
+		$Events = Event::findOrFail($id);
+
+
+
+        $Events->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Event.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Event::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+							<h4 id="item-1-12" >
+								12)Event video Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateeventvideoRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Eventvideo::max('sort')+1]));
+
+		$Events= Eventvideo::create($request->all());
+
+
+		return $Eventvideo;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateEventvideoRequest $request)
+	{
+		$Eventvideo = Event::findOrFail($id);
+
+
+
+        $Eventvideo->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Eventvideo.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Eventvideo::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h4 id="item-1-13" >
+								13)Magazine Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateMagazineRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Magazine ::max('sort')+1]));
+
+		$Magazines  = Magazine ::create($request->all());
+
+
+		return $Magazine ;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateMagazineRequest $request)
+	{
+		$Magazine  = Magazine ::findOrFail($id);
+
+
+
+        $Magazine->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Magazine.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Magazine ::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h4 id="item-1-14" >
+								14)jobs Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreatejobsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>jobs::max('sort')+1]));
+
+		$jobs= Doctors::create($request->all());
+
+
+		return $jobs;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdatejobsRequest $request)
+	{
+		$jobs = Contacts::findOrFail($id);
+
+
+
+        $jobs->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.jobs.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Doctors::jobs($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<!--//docs-code-block-->
+							<h4 id="item-1-15" >
+								15)News Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateNewsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>News::max('sort')+1]));
+
+		$News= News::create($request->all());
+
+
+		return $News;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateEventsRequest $request)
+	{
+		$News = $News::findOrFail($id);
+
+
+
+        $News->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.News.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        $News::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+							<h4 id="item-1-16" >
+								16)Product Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(CreateProductsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Products::max('sort')+1]));
+
+		$Products= Products::create($request->all());
+
+
+		return $Products;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateProductsRequest $request)
+	{
+		$Products = Products::findOrFail($id);
+
+
+
+        $Products->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Products.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Products::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h4 id="item-1-17" >
+									17)service Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(serviceController $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>service::max('sort')+1]));
+
+		$services = service::create($request->all());
+
+
+		return $services;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function update($id, UpdateEventvideoRequest $request)
+	{
+		$services = Services::findOrFail($id);
+        $services ->update($request->all());
+        \Session::flash('success', 'edited successfully');
+        return redirect()->route(config('quickadmin.route').'.services.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        services::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div>
+							<h4 id="item-1-18" >
+									18)Testmonials Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(TestmonialsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Testmonials::max('sort')+1]));
+		$test = Testmonials::create($request->all());
+
+		return $test;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+	public function update($id, UpdateTestRequest $request)
+	{
+		$test = Test::findOrFail($id);
+        $services ->update($request->all());
+        \Session::flash('success', 'edited successfully');
+        return redirect()->route(config('quickadmin.route').'.Testmonials.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Testmonials::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div>
+
+							<h4 id="item-1-19" >
+									19)Statistics Controller</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(StatisticsRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Statistics::max('sort')+1]));
+		$statistics = Statistics::create($request->all());
+
+		return $statistics;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+	public function update($id, StatisticsRequest $request)
+	{
+		$statistics = Statistics::findOrFail($id);
+        $services ->update($request->all());
+        \Session::flash('success', 'edited successfully');
+        return redirect()->route(config('quickadmin.route').'.Statistics.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Statistics::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div>
+							<h4 id="item-1-20" >
+									20)TipController</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(TipRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Tip::max('sort')+1]));
+		$tips = Statistics::create($request->all());
+
+		return $tips;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+	public function update($id, TipRequest $request)
+	{
+		$tips = Tip::findOrFail($id);
+        $tips ->update($request->all());
+        \Session::flash('success', 'edited successfully');
+        return redirect()->route(config('quickadmin.route').'.Tip.index');
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Tip::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div>
+							<h4 id="item-1-21" >
+								21)SocialController</h4>
+							<br>
+							<h5>a)Add function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+	public function store(SocialRequest $request)
+	{
+
+	    $request = $this->saveFiles($request);
+
+	    $request=new Request(array_merge($request->all(),['sort'=>Social::max('sort')+1]));
+
+		$Socials = Social::create($request->all());
+
+		return $Socials;
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+							<h5 >B) Update function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+	public function update($id, SocialRequest $request)
+	{
+		$Socials = Social::findOrFail($id);
+
+        $Socials ->update($request->all());
+
+        \Session::flash('success', 'edited successfully');
+
+        return redirect()->route(config('quickadmin.route').'.Social.index');
+
+	}
+
+
+</code></pre>
+							</div><!--//docs-code-block-->
+
+
+							<h5>c) Delete function :</h5>
+							<div class="docs-code-block">
+							<pre class="shadow-lg rounded"><code class="json hljs">
+
+    public function destroy($id)
+    {
+        Social::destroy($id);
+		return 1;
+
+    }
+
+</code></pre>
+							</div>
+
+
+						</div>
+						</div>
+					</section><!--//section-->
+					
+
+					
+
+					
+			    </article>
+			    
+			    <article class="docs-article" id="section-2">
+				    <header class="docs-header">
+					    <h1 class="docs-heading"> Model & Relations</h1>
+					    <section class="docs-intro">
+						    <p> Here is a code of models and relation in database you find it @ app/ </p>
+						</section><!--//docs-intro-->
+				    </header>
+				     <section class="docs-section"   id="item-2-1">
+						<h2 class="section-heading">1)AboutParagraphs</h2>
+						 <div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+  protected $table    = 'aboutparagraphs';
+
+    protected $fillable = [
+        'accordion',
+          'img',
+          'title',
+          'title2',
+          'desc',
+          'desc2'
+        , 'sort'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        AboutParagraphs::observe(new UserActionsObserver);
+    }
+
+</code></pre>
+						 </div>
+
+
+					 </section><!--//section-->
+				     <section class="docs-section"   id="item-2-2">
+						<h2 class="section-heading">2)Ask Doctor</h2>
+						 <div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+      protected $table = 'ask';
+    protected $fillable = ['name','name1','email','phone','question','question1','answer','answer1','drname','drname1','sort','visibility'];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        test::observe(new UserActionsObserver);
+    }
+
+</code></pre>
+						 </div>
+
+
+					 </section><!--//section-->
+				     <section class="docs-section"   id="item-2-3">
+						<h2 class="section-heading">3)Background</h2>
+						 <div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+         protected $table    = 'background';
+
+    protected $fillable = [
+          'name',
+          'img'
+        , 'sort'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        Background::observe(new UserActionsObserver);
+    }
+
+</code></pre>
+						 </div>
+
+
+					 </section><!--//section-->
+					 <section  class="docs-section"  id="item-2-4">
+						<h2 class="section-heading">4)Banner</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+
+  protected $table    = 'banner';
+
+    protected $fillable = ['title', 'title2', 'description', 'description1', 'img', 'has_frame'
+
+         ,'sort'
+        ];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        Banner::observe(new UserActionsObserver);
+    }
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-5">
+						<h2 class="section-heading">5)Branche</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+
+protected $table     =  'branches';
+
+protected $fillable  = ['name','name1','address','address1','phone','location','sort'];
+
+
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-6">
+						<h2 class="section-heading">6)Career</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+
+ protected $table ='career';
+
+    protected $fillable =['First_Name','job_id','Last_Name','Date_Of_Birth','Number_of_Dependents','Gender','Marital_Status','Nationality','email',"phone",'cv','sort'];
+
+    public function job()
+    {
+        return $this->belongsTo('App\job','job_id');
+    }
+
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-7">
+						<h2 class="section-heading">7)Categories</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+
+  protected $table    = 'categories';
+
+    protected $fillable = [
+          'name',
+          'name2',
+          'desc',
+          'desc2',
+          'img'
+    , 'sort'];
+
+    public function setDescAttribute($value)
+    {
+        if(!isset($value)){
+            $this->attributes['desc'] = ' ';
+        } else {
+            $this->attributes['desc'] = $value;
+        }
+
+    }
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        Categories::observe(new UserActionsObserver);
+    }
+
+    public function products() {
+        return $this->hasMany(Product::class);
+    }
+
+
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-8">
+						<h2 class="section-heading">8)Clients</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+
+   protected $table    = 'clients';
+
+    protected $fillable = [
+          'name',
+          'name2',
+          'img'
+    , 'sort'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        Clients::observe(new UserActionsObserver);
+    }
+
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-9">
+						<h2 class="section-heading">9)Contact</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+
+      protected $table    = 'contact';
+
+    protected $fillable = [
+          'subject',
+          'name',
+          'email',
+          'message'
+        , 'sort'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        Contact::observe(new UserActionsObserver);
+    }
+
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+
+					 <section  class="docs-section"  id="item-2-11">
+						<h2 class="section-heading">11)Dic</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+protected $table    = 'dic';
+
+    protected $fillable = [
+          'title',
+          'title1',
+          'description',
+          'description1',
+          'img'
+         ,'sort'
+        ];
+
+        public static function boot()
+        {
+            parent::boot();
+
+            dic::observe(new UserActionsObserver);
+        }
+
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-12">
+						<h2 class="section-heading">12)Doctors</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+protected $table = 'doctors';
+
+    protected $fillable = ['name','name2','address','address2','Specialist','Specialist'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        doctors::observe(new UserActionsObserver);
+
+    }
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-13">
+						<h2 class="section-heading">13)event</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+   protected $table    = 'event';
+    protected $fillable = ['title','title1','description','description1','location','location1','start_at','end_at','img','coming_event','sort'];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        event::observe(new UserActionsObserver);
+    }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-14">
+						<h2 class="section-heading">14)EventVideo</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+  protected $table    = 'eventvideo';
+
+    protected $fillable = [
+        'link',
+        'description',
+        'description1',
+        'title',
+        'title1'
+        , 'sort'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        EventVideo::observe(new UserActionsObserver);
+    }
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-15">
+						<h2 class="section-heading">15)Job</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+ protected $table = 'jobs';
+
+    protected $fillable = ['name','description','name2','description2'];
+
+   public function career()
+    {
+        return $this->hasMany( 'App\Career' ,'job_id');
+    }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-16">
+						<h2 class="section-heading">16)Magazine</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+  protected $table    = 'magazine';
+
+    protected $fillable = [
+          'title',
+          'title2',
+          'img',
+          'details',
+          'details2',
+          'pdf'
+    , 'sort'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        Magazine::observe(new UserActionsObserver);
+    }
+
+    public function getCreatedAtAttribute($date)
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('Y-m-d');
+    }
+
+    public function getUpdatedAtAttribute($date)
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('Y-m-d');
+    }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-17">
+						<h2 class="section-heading">17)News</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+   protected $table    = 'news';
+
+    protected $fillable = [
+          'title',
+          'title2',
+          'img',
+          'details',
+          'details2'
+    , 'sort'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        News::observe(new UserActionsObserver);
+    }
+
+    public function getCreatedAtAttribute($date)
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('Y-m-d');
+    }
+
+    public function getUpdatedAtAttribute($date)
+    {
+        return Carbon::createFromFormat('Y-m-d H:i:s', $date)->format('Y-m-d');
+    }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-18">
+						<h2 class="section-heading">18)Notifcations</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+  protected $table ='notifcations';
+    protected $fillable =['name','message','seen','type'];
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-19">
+						<h2 class="section-heading">19)Product</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+     protected $table    = 'product';
+
+    protected $fillable = [
+          'categories_id',
+          'name',
+          'name2',
+          'img',
+          'img2',
+          'desc',
+          'desc2',
+          'benefits',
+          'benefits2',
+          'content',
+          'content2'
+          , 'sort'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        Product::observe(new UserActionsObserver);
+    }
+
+    public function categories()
+    {
+        return $this->hasOne('App\Categories', 'id', 'categories_id');
+    }
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-20">
+						<h2 class="section-heading">20)Role</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+       protected $fillable = ['title'];
+
+    public $relation_ids = [];
+
+    public function menus()
+    {
+        return $this->belongsToMany(Menu::class);
+    }
+
+    public function canAccessMenu($menu)
+    {
+        if ($menu instanceof Menu) {
+            $menu = $menu->id;
+        }
+
+        if (! isset($this->relation_ids['menus'])) {
+            $this->relation_ids['menus'] = $this->menus()->pluck('id')->flip()->all();
+        }
+
+        return isset($this->relation_ids['menus'][$menu]);
+    }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-21">
+						<h2 class="section-heading">21)service</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+       protected $table = 'service';
+    protected $fillable = ['title','title1','description','description1','img','sort'];
+    public static function boot()
+    {
+        parent::boot();
+
+        service::observe(new UserActionsObserver);
+    }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-22">
+						<h2 class="section-heading">22)sitemap</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+ protected $table = 'sitemap';
+    protected $fillable = ['slug','value_en','value_ar','visibility','sort'];
+
+
+      public static function boot()
+       {
+        parent::boot();
+
+        sitemap::observe(new UserActionsObserver);
+       }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-23">
+						<h2 class="section-heading">23)social</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+ protected $table    = 'social';
+
+    protected $fillable = [
+          'name',
+          'url'
+    , 'sort'];
+
+
+    public static function boot()
+    {
+        parent::boot();
+
+        Social::observe(new UserActionsObserver);
+    }
+
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-24">
+						<h2 class="section-heading">24)statistics</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+ protected $table = 'statistics';
+    protected $fillable = ['title','title1','number','img','sort'];
+    public static function boot()
+    {
+        parent::boot();
+
+        AboutParagraphs::observe(new UserActionsObserver);
+    }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-25">
+						<h2 class="section-heading">25)tip of the month</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+  protected $table = 'tips';
+    protected $fillable = ['name','name1','description','description1','sort','img'];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        test::observe(new UserActionsObserver);
+    }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+					 <section  class="docs-section"  id="item-2-26">
+						<h2 class="section-heading">26)User</h2>
+						<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+AuthorizableContract,
+    CanResetPasswordContract
+{
+    use Authenticatable, Authorizable, CanResetPassword, AdminPermissionsTrait;
+
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'users';
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['name', 'email', 'password', 'role_id'];
+
+    /**
+     * The attributes excluded from the model's JSON form.
+     *
+     * @var array
+     */
+    protected $hidden = ['password', 'remember_token'];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        User::observe(new UserActionsObserver);
+    }
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+</code></pre>
+						</div>
+
+
+					</section><!--//section-->
+
+
+
+
+			    </article><!--//docs-article-->
+			    
+			    
+			    <article class="docs-article" id="section-3">
+				    <header class="docs-header">
+					    <h1 class="docs-heading"> Route & URL</h1>
+					    <section class="docs-intro" id="item-3-1">
+							<h2 class="section-heading">Route</h2>
+							<p> There the url & routes of all website and admin panel you can found it @ Routes/</p>
+
+							<div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+
+
+// Main Routes
+Route::put('generaleditSort','Admin\generalController@editSort')->name('admin.general.editSort');
+Route::post('contact/send','contactController@sendMsg')->name('contact.send');
+Route::get('addAjaxUsers','UsersController@get')->name('users.get');
+
+// Web Routes
+Route::get('/','webController@start')->name('home');
+Route::get('/about','webController@about')->name('about');
+Route::get('/services','webController@services')->name('services');
+Route::get('/product','webController@tab')->name('category');
+Route::get('/category/{id}', 'webController@tab')->name('categorie');
+Route::get('/category/{id}', 'webController@test1')->name('cat');
+Route::get('/productdetiales/{id}','webController@product')->name('productdetiales');
+
+Route::get('/comingevent','webController@comingevent')->name('comingevent');
+Route::get('/event','webController@event')->name('event');
+Route::get('/eventdetials/{id}','webController@eventdetials')->name('eventdetials');
+Route::get('/vedioEvent','webController@VEvent')->name('eventVedio');
+Route::get('/magazine','webController@magazines')->name('magazine');
+Route::get('/testimonials','webController@testimonials')->name('testimonials');
+Route::post('/testimonials','TestController@store')->name('testimonials.store');
+Route::get('/branches','webController@branches')->name('branches');
+Route::get('/contact','webController@contact')->name('contact');
+Route::get('/tip','webController@tip')->name('tip');
+Route::get('/tipdetials/{id}','webController@tipdetials')->name('tipdetials');
+
+Route::get('/new','webController@new')->name('new');
+Route::get('/newdetiales/{id}','webController@newdetiales')->name('newdetiales');
+Route::get('/vedio','webController@vedio')->name('vedio');
+Route::get('/job','webController@job')->name('job');
+Route::get('/ask','webController@ask')->name('ask');
+Route::get('/career/{id}', 'CareerController@index')->name('career');
+Route::post('/career', 'CareerController@store')->name('career.store');
+Route::get('/live_search', 'LiveSearch@index')->name('live_search');
+Route::get('/live_search/action', 'LiveSearch@action')->name('live_search.action');
+Route::post('/ask', 'AskDrController@store')->name('ask.store');
+Route::get('lang/{lang}','webController@changeLang')->name('lang.change');
+route::get('/test',function(){
+    return view('web.'.'ar.'.'test');
+});
+// Routes for Show/hide & Featured/NotFeatured
+Route::put('showBanner/{id}', 'Admin\BannerController@show')->name('admin.banner.show');
+Route::put('hideBanner/{id}', 'Admin\BannerController@hide')->name('admin.banner.hide');
+Route::put('featuredBanner/{id}', 'Admin\BannerController@featured')->name('admin.banner.featured');
+Route::put('notfeaturedBanner/{id}', 'Admin\BannerController@notfeatured')->name('admin.banner.notfeatured');
+
+
+Route::put('showservice/{id}',        'Admin\serviceControllerr@show')->name('admin.service.show');
+Route::put('hideservice/{id}',        'Admin\serviceController@hide')->name('admin.service.hide');
+Route::put('featuredservice/{id}',    'Admin\serviceController@featured')->name('admin.service.featured');
+Route::put('notfeaturedservice/{id}', 'Admin\serviceController@notfeatured')->name('admin.service.notfeatured');
+
+
+Route::put('showtest/{id}',          'Admin\TestsController@show')->name('admin.test.show');
+Route::put('hidetest/{id}',          'Admin\TestsController@hide')->name('admin.test.hide');
+Route::put('featuredtest/{id}',      'Admin\TestsController@featured')->name('admin.test.featured');
+Route::put('notfeaturedtip{id}',   'Admin\TestsController@notfeatured')->name('admin.test.notfeatured');
+
+Route::put('showtip/{id}',          'Admin\TipsController@show')->name('admin.tip.show');
+Route::put('hidetip/{id}',          'Admin\TipsController@hide')->name('admin.tip.hide');
+Route::put('featuredtip/{id}',      'Admin\TipsController@featured')->name('admin.tip.featured');
+Route::put('notfeaturedtest{id}',   'Admin\TipsController@notfeatured')->name('admin.tip.notfeatured');
+
+Route::put('showstatistics/{id}',        'Admin\statisticsController@show')->name('admin.statistics.show');
+Route::put('hidestatistics/{id}',        'Admin\statisticsController@hide')->name('admin.statistics.hide');
+Route::put('featuredstatistics/{id}',    'Admin\statisticsController@featured')->name('admin.statistics.featured');
+Route::put('notfeaturedstatistics/{id}', 'Admin\statisticsControllerr@notfeatured')->name('admin.statistics.notfeatured');
+
+
+Route::put('showHomeCertificate/{id}', 'Admin\HomeCertificateController@show')->name('admin.homecertificate.show');
+Route::put('hideHomeCertificate/{id}', 'Admin\HomeCertificateController@hide')->name('admin.homecertificate.hide');
+Route::put('featuredHomeCertificate/{id}', 'Admin\HomeCertificateController@featured')->name('admin.homecertificate.featured');
+Route::put('notfeaturedHomeCertificate/{id}', 'Admin\HomeCertificateController@notfeatured')->name('admin.homecertificate.notfeatured');
+
+
+
+Route::put('showCertificate/{id}', 'Admin\CertificateController@show')->name('admin.certificate.show');
+Route::put('hideCertificate/{id}', 'Admin\CertificateController@hide')->name('admin.certificate.hide');
+Route::put('featuredCertificate/{id}', 'Admin\CertificateController@featured')->name('admin.certificate.featured');
+Route::put('notfeaturedCertificate/{id}', 'Admin\CertificateController@notfeatured')->name('admin.certificate.notfeatured');
+
+
+Route::put('showMagazine/{id}', 'Admin\MagazineController@show')->name('admin.magazine.show');
+Route::put('hideMagazine/{id}', 'Admin\MagazineController@hide')->name('admin.magazine.hide');
+Route::put('featuredMagazine/{id}', 'Admin\MagazineController@featured')->name('admin.magazine.featured');
+Route::put('notfeaturedMagazine/{id}', 'Admin\MagazineController@notfeatured')->name('admin.magazine.notfeatured');
+
+Route::put('showNews/{id}', 'Admin\NewsController@show')->name('admin.news.show');
+Route::put('hideNews/{id}', 'Admin\NewsController@hide')->name('admin.news.hide');
+Route::put('featuredNews/{id}', 'Admin\NewsController@featured')->name('admin.news.featured');
+Route::put('notfeaturedNews/{id}', 'Admin\NewsController@notfeatured')->name('admin.news.notfeatured');
+
+Route::put('showevent/{id}', 'Admin\EventController@show')->name('admin.event.show');
+Route::put('hideevent/{id}', 'Admin\EventController@hide')->name('admin.event.hide');
+Route::put('featuredevent/{id}', 'Admin\EventController@featured')->name('admin.event.featured');
+Route::put('notfeaturedevent/{id}', 'Admin\EventController@notfeatured')->name('admin.event.notfeatured');
+
+
+Route::put('showSubNews/{id}',    'Admin\SubnewsController@show')->name('admin.subnews.show');
+Route::put('hideSubNews/{id}',       'Admin\SubnewsController@hide')->name('admin.subnews.hide');
+Route::put('featuredSubNews/{id}',    'Admin\SubnewsController@featured')->name('admin.subnews.featured');
+Route::put('notfeaturedSubNews/{id}', 'Admin\SubnewsController@notfeatured')->name('admin.subnews.notfeatured');
+
+
+
+Route::put('showClients/{id}', 'Admin\ClientsController@show')->name('admin.clients.show');
+Route::put('hideClients/{id}', 'Admin\ClientsController@hide')->name('admin.clients.hide');
+Route::put('featuredClients/{id}', 'Admin\ClientsController@featured')->name('admin.clients.featured');
+Route::put('notfeaturedClients/{id}', 'Admin\ClientsController@notfeatured')->name('admin.clients.notfeatured');
+
+Route::post('search','Admin\ProductController@search')->name('productStore');
+
+Route::post('/image', 'Admin\ProductController@image')->name('admin.product.image');
+Route::put('showProduct/{id}', 'Admin\ProductController@show')->name('admin.product.show');
+Route::put('hideProduct/{id}', 'Admin\ProductController@hide')->name('admin.product.hide');
+Route::put('featuredProduct/{id}', 'Admin\ProductController@featured')->name('admin.product.featured');
+Route::put('notfeaturedProduct/{id}', 'Admin\ProductController@notfeatured')->name('admin.product.notfeatured');
+Route::put('featuredSection2Product/{id}', 'Admin\ProductController@featuredSection2')->name('admin.product.featuredSection2');
+Route::put('notfeaturedSection2Product/{id}', 'Admin\ProductController@notfeaturedSection2')->name('admin.product.notfeaturedSection2');
+Route::put('someProductsProduct/{id}', 'Admin\ProductController@someProducts')->name('admin.product.someProducts');
+Route::put('notsomeProductsProduct/{id}', 'Admin\ProductController@notsomeProducts')->name('admin.product.notsomeProducts');
+
+Route::put('showContacts/{id}', 'Admin\HomeContactsController@show')->name('admin.contacts.show');
+Route::put('hideContacts/{id}', 'Admin\HomeContactsController@hide')->name('admin.contacts.hide');
+
+Route::put('showCompanyProduct/{id}', 'Admin\CompanyProductController@show')->name('admin.companyproduct.show');
+Route::put('hideCompanyProduct/{id}', 'Admin\CompanyProductController@hide')->name('admin.companyproduct.hide');
+
+
+
+
+Route::put('showAboutParagraphs/{id}', 'Admin\AboutParagraphsController@show')->name('admin.aboutparagraphs.show');
+Route::put('hideAboutParagraphs/{id}', 'Admin\AboutParagraphsController@hide')->name('admin.aboutparagraphs.hide');
+
+Route::put('showsitemap/{id}', 'Admin\SitemapController@show')->name('admin.sitemap.show');
+Route::put('hidesitemap/{id}', 'Admin\SitemapController@hide')->name('admin.sitemap.hide');
+
+
+Route::put('showAsk/{id}', 'Admin\AskController@show')->name('admin.ask.show');
+Route::put('hideAsk/{id}', 'Admin\AskController@hide')->name('admin.ask.hide');
+
+
+
+Route::put('showevideo/{id}'    , 'Admin\EventvideoControllerr@show')->name('admin.eventvideo.show');
+Route::put('hideevideo/{id}'    ,  'Admin\EventvideoController@hide')->name('admin.eventvideo.hide');
+
+Route::put('showvideos/{id}', 'Admin\VideosController@show')->name('admin.videos.show');
+Route::put('hidevideos/{id}', 'Admin\VideosController@hide')->name('admin.videos.hide');
+
+
+
+
+Route::put('showCategories/{id}', 'Admin\CategoriesController@show')->name('admin.categories.show');
+Route::put('hideCategories/{id}', 'Admin\CategoriesController@hide')->name('admin.categories.hide');
+
+
+Route::put('showDoctor/{id}', 'Admin\DoctorsController@show')->name('admin.doctor.show');
+Route::put('hideDoctor/{id}', 'Admin\DoctorsController@hide')->name('admin.doctor.hide');
+
+
+
+Route::put('showBranche/{id}', 'Admin\BranchesController@show')->name('admin.branches.show');
+Route::put('hideBranche/{id}', 'Admin\BranchesController@hide')->name('admin.branches.hide');
+
+
+
+Route::put('showJob/{id}', 'Admin\JobsController@show')->name('admin.job.show');
+Route::put('hideJob/{id}', 'Admin\JobsController@hide')->name('admin.job.hide');
+Route::put('showCareer/{id}', 'Admin\JobsController@careerShow')->name('admin.job.career');
+
+
+// Client Side Chat
+Route::get('chat','Admin\MessagesController@main')->name('chat');
+Route::post('chatbox','Admin\MessagesController@start_chat')->name('chatbox');
+Route::resource('messages','Admin\MessagesController');
+//Admin Side Chat
+Route::get('adminchatbox/{id}','Admin\MessagesController@show_chat')->name('adminchatbox');
+Route::post('messages/adminstore','Admin\MessagesController@admin_store')->name('messages.admin.store');
+
+
+Route::get('notifcation/update/{id}','NotifcationController@update')->name('updateNotifcation');
+
+								</code></pre>
+							</div>
+						</section><!--//docs-intro-->
+				    </header>
+
+			    </article><!--//docs-article-->
+			    
+			    <article class="docs-article" id="section-4">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Integrated Plugins</h1>
+					    <section class="docs-intro">
+						    <p>From here you can find the integrated plugins name @ Composer.json or the plugin folder @ Vendor/</p>
+						</section><!--//docs-intro-->
+				    </header>
+
+				     <section class="docs-section" id="item-4-1">
+						<h2 class="section-heading"> Composer.jason</h2>
+						 <div class="docs-code-block">
+									<pre class="shadow-lg rounded"><code class="json hljs">
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "fideloper/proxy": "~3.3",
+        "guzzlehttp/guzzle": "^6.5",
+        "laravel/framework": "5.5.*",
+        "laravel/tinker": "~1.0",
+        "laraveldaily/quickadmin": "^3.0"
+    },
+    "require-dev": {
+        "filp/whoops": "~2.0",
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~6.0",
+        "symfony/thanks": "^1.0"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
+
+
+								</code></pre>
+						 </div>
+					</section><!--//section-->
+					
+
+
+			    </article><!--//docs-article-->
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+					    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+				        <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a  style="color: red;" class="theme-link" href="http://www.a-designs.net" target="_blank">@design</a> for developers</small>
+
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
     
-    <footer class="footer">
-
-	    <div class="footer-bottom text-center py-5">
-		    
-		    <ul class="social-list list-unstyled pb-4 mb-0">
-			    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
-	            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-	            <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-	            <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
-	            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
-	            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
-	        </ul><!--//social-list-->
-	        
-	        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-            
-	        
-	    </div>
-	    
-    </footer>
+   
        
     <!-- Javascript -->          
     <script src="assets/plugins/jquery-3.4.1.min.js"></script>
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
+    
+    <!-- Page Specific JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
 
 </body>
 </html> 
